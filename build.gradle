@@ -32,14 +32,15 @@ repositories {
 }
 
 ext {
-    junitVersion = '4.2.34'
+    serenityCoreVersion = '4.2.34'
+    junitJupiterVersion = '5.10.5'
     logbackVersion = '1.5.19'
     lombokVersion = '1.18.22'
 }
 
 dependencies {
-    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
 
     implementation ("net.serenity-bdd:serenity-core:${serenityCoreVersion}")
     implementation "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}"
