@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Seleccionar fecha en el campo de formulario de DatePicker" skipped="0" tests="1" time="0.3" timestamp="2025-12-15 06:05:33"><testcase name="Seleccion de una fecha especifica en un mes diferente al actual"><error message="Datepicker URL is not configured. Set environment variable DATEPICKER_URL or system property -Ddatepicker.url" type="java.lang.IllegalStateException">Datepicker URL is not configured. Set environment variable DATEPICKER_URL or system property -Ddatepicker.url</error><system-err>Datepicker URL is not configured. Set environment variable DATEPICKER_URL or system property -Ddatepicker.url&#13;
+co.sqasa.config.TestConfig.required(TestConfig.java:50)&#13;
+co.sqasa.config.TestConfig.datepickerUrl(TestConfig.java:19)&#13;
+co.sqasa.tasks.OpenBrowserTask.openPage(OpenBrowserTask.java:15)&#13;
+co.sqasa.stepdefinitions.SeleccionFechaStepDefinitioons.queLaUsuariaAbreLaPaginaDelDatepicker(SeleccionFechaStepDefinitioons.java:38)&#13;
+✽.que la usuaria abre la pagina del datepicker(file:///D:/Reto_Tecnico/src/test/resources/features/selecion_fecha.feature:10)&#13;
+</system-err></testcase></testsuite>

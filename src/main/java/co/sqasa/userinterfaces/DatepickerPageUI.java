@@ -7,9 +7,7 @@ public class DatepickerPageUI {
     private DatepickerPageUI() {
         throw new IllegalStateException("Utility class");
     }
-    public static final Target IFRAME_DEMO =
-            Target.the("iframe del demo").located(By.cssSelector("iframe.demo-frame"));
-
+    public static final By IFRAME_DEMO_BY = By.cssSelector("iframe.demo-frame");
     public static final Target INPUT_DATE =
             Target.the("input del datepicker").located(By.id("datepicker"));
 

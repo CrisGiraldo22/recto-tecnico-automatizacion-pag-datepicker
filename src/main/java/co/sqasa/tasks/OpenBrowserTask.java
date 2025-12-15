@@ -4,9 +4,11 @@ import co.sqasa.config.TestConfig;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
 
-public class OpenBrowserTask {
+public final class OpenBrowserTask {
 
-    private OpenBrowserTask() {}
+    private OpenBrowserTask() {
+        throw new IllegalStateException("Utility class");
+    }
 
     public static Task openPage() {
         return Task.where("{0} abre la página del datepicker",
@@ -14,6 +16,3 @@ public class OpenBrowserTask {
         );
     }
 }
-
-
-
