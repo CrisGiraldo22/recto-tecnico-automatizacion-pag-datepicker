@@ -6,18 +6,18 @@ import net.serenitybdd.screenplay.actions.Open;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class AbrirNavegadorTask implements Task {
-    private static final String urlPage = "https://jqueryui.com/datepicker/";
+public class OpenBrowserTask implements Task {
+    private static final String URL_PAGE = "https://jqueryui.com/datepicker/";
 
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
-                Open.url(urlPage)
+                Open.url(URL_PAGE)
 
         );
     }
-    public static AbrirNavegadorTask openPage(){
-        return instrumented(AbrirNavegadorTask.class);
+    public static OpenBrowserTask openPage(){
+        return instrumented(OpenBrowserTask.class);
     }
 }
 
