@@ -103,3 +103,10 @@ El proyecto está preparado para ejecutar sin hardcodear URIs en el código, usa
 ### Desde consola (Gradle)
 ```bash
 ./gradlew clean test aggregate
+
+## Evidence and Reports
+
+### Quick links
+- Sonar evidence: `evidence/sonar/sonar-evidence.pdf`
+- Serenity report: `evidence/serenity/index.html`
+
