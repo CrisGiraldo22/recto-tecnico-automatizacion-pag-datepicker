@@ -14,6 +14,7 @@ plugins {
     id 'java'
     id 'eclipse'
     id 'idea'
+    id "org.sonarqube" version "7.2.1.6560"
 }
 
 defaultTasks 'clean','test','aggregate'
@@ -62,6 +63,13 @@ dependencies {
     testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 }
+sonarqube {
+    properties {
+        property "sonar.projectKey", "taller-inicial-sqasa-automatizacion"
+        property "sonar.projectName", "taller-inicial-sqasa-automatizacion"
+        property "sonar.host.url", System.getenv("SONAR_HOST_URL") ?: "http://localhost:9000"
+        property "sonar.token", System.getenv("SONAR_TOKEN")
+    }
 
 test {
     useJUnitPlatform()
@@ -70,10 +78,10 @@ test {
 }
 
 serenity {
-    testRoot = "com.airbnb"
+    testRoot = "co.sqasa"
     requirementsBaseDir = "src/test/resources/features"
     reports = ["single-page-html"]
 }
 
 gradle.startParameter.continueOnFailure = true
-test.finalizedBy(aggregate)
+test.finalizedBy(aggregate)}
